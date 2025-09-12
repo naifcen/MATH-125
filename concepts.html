@@ -10,323 +10,85 @@
         body {
             font-family: 'Inter', sans-serif;
         }
+        .flashcard-container {
+            perspective: 1000px;
+        }
         .flashcard {
-            background-color: #fff;
-            border: 1px solid #e2e8f0; /* slate-200 */
-            border-top: 5px solid #6366f1; /* indigo-500 */
+            transition: transform 0.6s;
+            transform-style: preserve-3d;
         }
-        details > summary {
-            cursor: pointer;
-            list-style: none;
-        }
-        details > summary::-webkit-details-marker {
+        .flashcard .answer {
             display: none;
-        }
-        .answer-block {
-             background-color: #f0fdf4; /* green-50 */
-             border: 1px solid #16a34a; /* green-600 */
-             color: #14532d; /* green-900 */
-        }
-        textarea {
-            resize: vertical;
         }
     </style>
 </head>
-<body class="bg-slate-50 text-slate-800">
+<body class="bg-slate-100 text-slate-800">
 
     <div class="container mx-auto p-4 sm:p-6 lg:p-8">
         <header class="text-center mb-10">
-            <h1 class="text-4xl md:text-5xl font-bold text-slate-900">Statistics Flashcards</h1>
-            <p class="text-lg text-slate-600 mt-2">Review all concepts, symbols, and formulas from Chapters 1 & 2.</p>
+            <h1 class="text-4xl md:text-5xl font-bold text-slate-900">Interactive Flashcards</h1>
+            <p class="text-lg text-slate-600 mt-2">Test your knowledge of key concepts, symbols, and formulas.</p>
         </header>
 
-        <main class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-
-            <!-- Chapter 1 Concepts -->
-            <div class="flashcard p-5 rounded-lg shadow-md">
-                <h3 class="text-lg font-semibold text-indigo-700 mb-3">What are 'Individuals' in statistics?</h3>
-                <textarea class="w-full p-2 border rounded bg-slate-100 focus:ring-2 focus:ring-indigo-400" rows="3" placeholder="Type your answer here..."></textarea>
-                <details class="mt-3">
-                    <summary class="inline-block bg-indigo-500 text-white font-semibold py-2 px-4 rounded-lg hover:bg-indigo-600 transition-colors text-sm">Show Answer</summary>
-                    <div class="mt-3 p-3 answer-block rounded-md">
-                        <p>The objects (people, animals, things) described by a set of data.</p>
-                    </div>
-                </details>
-            </div>
-            
-            <div class="flashcard p-5 rounded-lg shadow-md">
-                <h3 class="text-lg font-semibold text-indigo-700 mb-3">What is a 'Variable'?</h3>
-                <textarea class="w-full p-2 border rounded bg-slate-100 focus:ring-2 focus:ring-indigo-400" rows="3" placeholder="Type your answer here..."></textarea>
-                <details class="mt-3">
-                    <summary class="inline-block bg-indigo-500 text-white font-semibold py-2 px-4 rounded-lg hover:bg-indigo-600 transition-colors text-sm">Show Answer</summary>
-                    <div class="mt-3 p-3 answer-block rounded-md">
-                        <p>A characteristic of an individual.</p>
-                    </div>
-                </details>
-            </div>
-
-            <div class="flashcard p-5 rounded-lg shadow-md">
-                <h3 class="text-lg font-semibold text-indigo-700 mb-3">Define 'Population'.</h3>
-                <textarea class="w-full p-2 border rounded bg-slate-100 focus:ring-2 focus:ring-indigo-400" rows="3" placeholder="Type your answer here..."></textarea>
-                <details class="mt-3">
-                    <summary class="inline-block bg-indigo-500 text-white font-semibold py-2 px-4 rounded-lg hover:bg-indigo-600 transition-colors text-sm">Show Answer</summary>
-                    <div class="mt-3 p-3 answer-block rounded-md">
-                        <p>The entire set of individuals we are interested in studying.</p>
-                    </div>
-                </details>
-            </div>
-
-            <div class="flashcard p-5 rounded-lg shadow-md">
-                <h3 class="text-lg font-semibold text-indigo-700 mb-3">Define 'Sample'.</h3>
-                <textarea class="w-full p-2 border rounded bg-slate-100 focus:ring-2 focus:ring-indigo-400" rows="3" placeholder="Type your answer here..."></textarea>
-                <details class="mt-3">
-                    <summary class="inline-block bg-indigo-500 text-white font-semibold py-2 px-4 rounded-lg hover:bg-indigo-600 transition-colors text-sm">Show Answer</summary>
-                    <div class="mt-3 p-3 answer-block rounded-md">
-                        <p>A subset of individuals drawn from a population, used to draw conclusions about the whole population.</p>
-                    </div>
-                </details>
-            </div>
-            
-            <div class="flashcard p-5 rounded-lg shadow-md">
-                <h3 class="text-lg font-semibold text-indigo-700 mb-3">What is a 'Population Parameter'?</h3>
-                <textarea class="w-full p-2 border rounded bg-slate-100 focus:ring-2 focus:ring-indigo-400" rows="3" placeholder="Type your answer here..."></textarea>
-                <details class="mt-3">
-                    <summary class="inline-block bg-indigo-500 text-white font-semibold py-2 px-4 rounded-lg hover:bg-indigo-600 transition-colors text-sm">Show Answer</summary>
-                    <div class="mt-3 p-3 answer-block rounded-md">
-                        <p>A measurable characteristic of a population. It's denoted by Greek letters.</p>
-                    </div>
-                </details>
-            </div>
-
-            <div class="flashcard p-5 rounded-lg shadow-md">
-                <h3 class="text-lg font-semibold text-indigo-700 mb-3">What is a 'Sample Statistic'?</h3>
-                <textarea class="w-full p-2 border rounded bg-slate-100 focus:ring-2 focus:ring-indigo-400" rows="3" placeholder="Type your answer here..."></textarea>
-                <details class="mt-3">
-                    <summary class="inline-block bg-indigo-500 text-white font-semibold py-2 px-4 rounded-lg hover:bg-indigo-600 transition-colors text-sm">Show Answer</summary>
-                    <div class="mt-3 p-3 answer-block rounded-md">
-                        <p>A measurable characteristic of a sample. It's denoted by Latin letters.</p>
-                    </div>
-                </details>
-            </div>
-            
-            <div class="flashcard p-5 rounded-lg shadow-md">
-                <h3 class="text-lg font-semibold text-indigo-700 mb-3">What does the symbol μ represent?</h3>
-                <textarea class="w-full p-2 border rounded bg-slate-100 focus:ring-2 focus:ring-indigo-400" rows="3" placeholder="Type your answer here..."></textarea>
-                <details class="mt-3">
-                    <summary class="inline-block bg-indigo-500 text-white font-semibold py-2 px-4 rounded-lg hover:bg-indigo-600 transition-colors text-sm">Show Answer</summary>
-                    <div class="mt-3 p-3 answer-block rounded-md">
-                        <p>The Population Mean.</p>
-                    </div>
-                </details>
-            </div>
-            
-            <div class="flashcard p-5 rounded-lg shadow-md">
-                <h3 class="text-lg font-semibold text-indigo-700 mb-3">What does the symbol σ represent?</h3>
-                <textarea class="w-full p-2 border rounded bg-slate-100 focus:ring-2 focus:ring-indigo-400" rows="3" placeholder="Type your answer here..."></textarea>
-                <details class="mt-3">
-                    <summary class="inline-block bg-indigo-500 text-white font-semibold py-2 px-4 rounded-lg hover:bg-indigo-600 transition-colors text-sm">Show Answer</summary>
-                    <div class="mt-3 p-3 answer-block rounded-md">
-                        <p>The Population Standard Deviation.</p>
-                    </div>
-                </details>
-            </div>
-            
-            <div class="flashcard p-5 rounded-lg shadow-md">
-                <h3 class="text-lg font-semibold text-indigo-700 mb-3">What does the symbol x̄ represent?</h3>
-                <textarea class="w-full p-2 border rounded bg-slate-100 focus:ring-2 focus:ring-indigo-400" rows="3" placeholder="Type your answer here..."></textarea>
-                <details class="mt-3">
-                    <summary class="inline-block bg-indigo-500 text-white font-semibold py-2 px-4 rounded-lg hover:bg-indigo-600 transition-colors text-sm">Show Answer</summary>
-                    <div class="mt-3 p-3 answer-block rounded-md">
-                        <p>The Sample Mean.</p>
-                    </div>
-                </details>
-            </div>
-
-            <div class="flashcard p-5 rounded-lg shadow-md">
-                <h3 class="text-lg font-semibold text-indigo-700 mb-3">What does the symbol 's' represent?</h3>
-                <textarea class="w-full p-2 border rounded bg-slate-100 focus:ring-2 focus:ring-indigo-400" rows="3" placeholder="Type your answer here..."></textarea>
-                <details class="mt-3">
-                    <summary class="inline-block bg-indigo-500 text-white font-semibold py-2 px-4 rounded-lg hover:bg-indigo-600 transition-colors text-sm">Show Answer</summary>
-                    <div class="mt-3 p-3 answer-block rounded-md">
-                        <p>The Sample Standard Deviation.</p>
-                    </div>
-                </details>
-            </div>
-
-            <div class="flashcard p-5 rounded-lg shadow-md">
-                <h3 class="text-lg font-semibold text-indigo-700 mb-3">Define 'Categorical Variable'.</h3>
-                <textarea class="w-full p-2 border rounded bg-slate-100 focus:ring-2 focus:ring-indigo-400" rows="3" placeholder="Type your answer here..."></textarea>
-                <details class="mt-3">
-                    <summary class="inline-block bg-indigo-500 text-white font-semibold py-2 px-4 rounded-lg hover:bg-indigo-600 transition-colors text-sm">Show Answer</summary>
-                    <div class="mt-3 p-3 answer-block rounded-md">
-                        <p>A variable that places individuals into one of several groups or categories. Plotted with pie charts or bar graphs.</p>
-                    </div>
-                </details>
-            </div>
-
-            <div class="flashcard p-5 rounded-lg shadow-md">
-                <h3 class="text-lg font-semibold text-indigo-700 mb-3">Define 'Quantitative Variable'.</h3>
-                <textarea class="w-full p-2 border rounded bg-slate-100 focus:ring-2 focus:ring-indigo-400" rows="3" placeholder="Type your answer here..."></textarea>
-                <details class="mt-3">
-                    <summary class="inline-block bg-indigo-500 text-white font-semibold py-2 px-4 rounded-lg hover:bg-indigo-600 transition-colors text-sm">Show Answer</summary>
-                    <div class="mt-3 p-3 answer-block rounded-md">
-                        <p>A variable that takes numerical values for which arithmetic operations make sense. Plotted with histograms or stemplots.</p>
-                    </div>
-                </details>
-            </div>
-
-            <div class="flashcard p-5 rounded-lg shadow-md">
-                <h3 class="text-lg font-semibold text-indigo-700 mb-3">What does the acronym SOCS stand for?</h3>
-                <textarea class="w-full p-2 border rounded bg-slate-100 focus:ring-2 focus:ring-indigo-400" rows="3" placeholder="Type your answer here..."></textarea>
-                <details class="mt-3">
-                    <summary class="inline-block bg-indigo-500 text-white font-semibold py-2 px-4 rounded-lg hover:bg-indigo-600 transition-colors text-sm">Show Answer</summary>
-                    <div class="mt-3 p-3 answer-block rounded-md">
-                        <p>Shape, Outlier, Center, Spread. This is used to describe the overall pattern of a distribution.</p>
-                    </div>
-                </details>
-            </div>
-
-            <div class="flashcard p-5 rounded-lg shadow-md">
-                <h3 class="text-lg font-semibold text-indigo-700 mb-3">Describe a 'Right-Skewed' distribution.</h3>
-                <textarea class="w-full p-2 border rounded bg-slate-100 focus:ring-2 focus:ring-indigo-400" rows="3" placeholder="Type your answer here..."></textarea>
-                <details class="mt-3">
-                    <summary class="inline-block bg-indigo-500 text-white font-semibold py-2 px-4 rounded-lg hover:bg-indigo-600 transition-colors text-sm">Show Answer</summary>
-                    <div class="mt-3 p-3 answer-block rounded-md">
-                        <p>The right side (tail) of the graph is much longer than the left side. For this shape, the Mean > Median.</p>
-                    </div>
-                </details>
-            </div>
-
-            <div class="flashcard p-5 rounded-lg shadow-md">
-                <h3 class="text-lg font-semibold text-indigo-700 mb-3">Describe a 'Left-Skewed' distribution.</h3>
-                <textarea class="w-full p-2 border rounded bg-slate-100 focus:ring-2 focus:ring-indigo-400" rows="3" placeholder="Type your answer here..."></textarea>
-                <details class="mt-3">
-                    <summary class="inline-block bg-indigo-500 text-white font-semibold py-2 px-4 rounded-lg hover:bg-indigo-600 transition-colors text-sm">Show Answer</summary>
-                    <div class="mt-3 p-3 answer-block rounded-md">
-                        <p>The left side (tail) of the graph is much longer than the right side. For this shape, the Mean < Median.</p>
-                    </div>
-                </details>
-            </div>
-            
-            <div class="flashcard p-5 rounded-lg shadow-md">
-                <h3 class="text-lg font-semibold text-indigo-700 mb-3">What is the key difference between a histogram and a bar graph?</h3>
-                <textarea class="w-full p-2 border rounded bg-slate-100 focus:ring-2 focus:ring-indigo-400" rows="3" placeholder="Type your answer here..."></textarea>
-                <details class="mt-3">
-                    <summary class="inline-block bg-indigo-500 text-white font-semibold py-2 px-4 rounded-lg hover:bg-indigo-600 transition-colors text-sm">Show Answer</summary>
-                    <div class="mt-3 p-3 answer-block rounded-md">
-                        <p>A histogram displays the distribution of a quantitative variable (bars usually touch), while a bar graph displays the distribution of a categorical variable (bars have spaces).</p>
-                    </div>
-                </details>
-            </div>
-
-            <!-- Chapter 2 Concepts -->
-            <div class="flashcard p-5 rounded-lg shadow-md">
-                <h3 class="text-lg font-semibold text-indigo-700 mb-3">Which measure of center is 'resistant' and what does that mean?</h3>
-                <textarea class="w-full p-2 border rounded bg-slate-100 focus:ring-2 focus:ring-indigo-400" rows="3" placeholder="Type your answer here..."></textarea>
-                <details class="mt-3">
-                    <summary class="inline-block bg-indigo-500 text-white font-semibold py-2 px-4 rounded-lg hover:bg-indigo-600 transition-colors text-sm">Show Answer</summary>
-                    <div class="mt-3 p-3 answer-block rounded-md">
-                        <p>The Median. 'Resistant' means it is not influenced by extreme observations (outliers). The Mean is not resistant.</p>
-                    </div>
-                </details>
-            </div>
-            
-            <div class="flashcard p-5 rounded-lg shadow-md">
-                <h3 class="text-lg font-semibold text-indigo-700 mb-3">What is the 'Interquartile Range' (IQR) and what does it measure?</h3>
-                <textarea class="w-full p-2 border rounded bg-slate-100 focus:ring-2 focus:ring-indigo-400" rows="3" placeholder="Type your answer here..."></textarea>
-                <details class="mt-3">
-                    <summary class="inline-block bg-indigo-500 text-white font-semibold py-2 px-4 rounded-lg hover:bg-indigo-600 transition-colors text-sm">Show Answer</summary>
-                    <div class="mt-3 p-3 answer-block rounded-md">
-                        <p>IQR is the distance between the first (Q₁) and third (Q₃) quartiles. It is a resistant measure of the variability of the central 50% of the data.</p>
-                    </div>
-                </details>
-            </div>
-            
-            <div class="flashcard p-5 rounded-lg shadow-md">
-                <h3 class="text-lg font-semibold text-indigo-700 mb-3">List the components of the 'Five-Number Summary'.</h3>
-                <textarea class="w-full p-2 border rounded bg-slate-100 focus:ring-2 focus:ring-indigo-400" rows="3" placeholder="Type your answer here..."></textarea>
-                <details class="mt-3">
-                    <summary class="inline-block bg-indigo-500 text-white font-semibold py-2 px-4 rounded-lg hover:bg-indigo-600 transition-colors text-sm">Show Answer</summary>
-                    <div class="mt-3 p-3 answer-block rounded-md">
-                        <p>Minimum, First Quartile (Q₁), Median (M), Third Quartile (Q₃), Maximum.</p>
-                    </div>
-                </details>
-            </div>
-            
-             <div class="flashcard p-5 rounded-lg shadow-md">
-                <h3 class="text-lg font-semibold text-indigo-700 mb-3">What does 'Standard Deviation' measure?</h3>
-                <textarea class="w-full p-2 border rounded bg-slate-100 focus:ring-2 focus:ring-indigo-400" rows="3" placeholder="Type your answer here..."></textarea>
-                <details class="mt-3">
-                    <summary class="inline-block bg-indigo-500 text-white font-semibold py-2 px-4 rounded-lg hover:bg-indigo-600 transition-colors text-sm">Show Answer</summary>
-                    <div class="mt-3 p-3 answer-block rounded-md">
-                        <p>It measures the typical or average distance of observations from the sample mean (x̄). It is the most common measure of variability but is NOT resistant.</p>
-                    </div>
-                </details>
-            </div>
-            
-            <div class="flashcard p-5 rounded-lg shadow-md">
-                <h3 class="text-lg font-semibold text-indigo-700 mb-3">When should you use the Mean/SD vs. the Five-Number Summary?</h3>
-                <textarea class="w-full p-2 border rounded bg-slate-100 focus:ring-2 focus:ring-indigo-400" rows="3" placeholder="Type your answer here..."></textarea>
-                <details class="mt-3">
-                    <summary class="inline-block bg-indigo-500 text-white font-semibold py-2 px-4 rounded-lg hover:bg-indigo-600 transition-colors text-sm">Show Answer</summary>
-                    <div class="mt-3 p-3 answer-block rounded-md">
-                        <p>Use Mean and Standard Deviation (s) for reasonably symmetric distributions without outliers. Use the Five-Number Summary for skewed distributions or distributions with strong outliers.</p>
-                    </div>
-                </details>
-            </div>
-            
-            <!-- Formulas -->
-            <div class="flashcard p-5 rounded-lg shadow-md">
-                <h3 class="text-lg font-semibold text-indigo-700 mb-3">What is the formula for the 'Mean' (x̄)?</h3>
-                <textarea class="w-full p-2 border rounded bg-slate-100 focus:ring-2 focus:ring-indigo-400" rows="3" placeholder="Type your answer here..."></textarea>
-                <details class="mt-3">
-                    <summary class="inline-block bg-indigo-500 text-white font-semibold py-2 px-4 rounded-lg hover:bg-indigo-600 transition-colors text-sm">Show Answer</summary>
-                    <div class="mt-3 p-3 answer-block rounded-md">
-                        <p class="font-mono text-center text-lg">x̄ = (Σxᵢ) / n</p>
-                    </div>
-                </details>
-            </div>
-
-            <div class="flashcard p-5 rounded-lg shadow-md">
-                <h3 class="text-lg font-semibold text-indigo-700 mb-3">What is the formula for the 'IQR'?</h3>
-                <textarea class="w-full p-2 border rounded bg-slate-100 focus:ring-2 focus:ring-indigo-400" rows="3" placeholder="Type your answer here..."></textarea>
-                <details class="mt-3">
-                    <summary class="inline-block bg-indigo-500 text-white font-semibold py-2 px-4 rounded-lg hover:bg-indigo-600 transition-colors text-sm">Show Answer</summary>
-                    <div class="mt-3 p-3 answer-block rounded-md">
-                        <p class="font-mono text-center text-lg">IQR = Q₃ - Q₁</p>
-                    </div>
-                </details>
-            </div>
-
-            <div class="flashcard p-5 rounded-lg shadow-md">
-                <h3 class="text-lg font-semibold text-indigo-700 mb-3">What is the rule/formula for identifying 'Outliers'?</h3>
-                <textarea class="w-full p-2 border rounded bg-slate-100 focus:ring-2 focus:ring-indigo-400" rows="3" placeholder="Type your answer here..."></textarea>
-                <details class="mt-3">
-                    <summary class="inline-block bg-indigo-500 text-white font-semibold py-2 px-4 rounded-lg hover:bg-indigo-600 transition-colors text-sm">Show Answer</summary>
-                    <div class="mt-3 p-3 answer-block rounded-md">
-                         <p>An observation is an outlier if it falls outside the following bounds:</p>
-                         <p class="font-mono mt-2">Lower Bound: Q₁ - (1.5 × IQR)</p>
-                         <p class="font-mono">Upper Bound: Q₃ + (1.5 × IQR)</p>
-                    </div>
-                </details>
-            </div>
-
-            <div class="flashcard p-5 rounded-lg shadow-md">
-                <h3 class="text-lg font-semibold text-indigo-700 mb-3">What is the formula for 'Variance' (s²)?</h3>
-                <textarea class="w-full p-2 border rounded bg-slate-100 focus:ring-2 focus:ring-indigo-400" rows="3" placeholder="Type your answer here..."></textarea>
-                <details class="mt-3">
-                    <summary class="inline-block bg-indigo-500 text-white font-semibold py-2 px-4 rounded-lg hover:bg-indigo-600 transition-colors text-sm">Show Answer</summary>
-                    <div class="mt-3 p-3 answer-block rounded-md">
-                         <p class="font-mono text-center text-lg">s² = Σ(xᵢ - x̄)² / (n-1)</p>
-                    </div>
-                </details>
-            </div>
-
-        </main>
-        
-        <footer class="text-center mt-12 pt-6 border-t border-slate-300">
-            <p class="text-slate-500">Review these cards until you know them by heart!</p>
-        </footer>
+        <div id="flashcard-grid" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+            <!-- Flashcards will be dynamically inserted here -->
+        </div>
     </div>
+
+    <script>
+        const flashcards = [
+            { q: "What are the objects described by a set of data called?", a: "Individuals." },
+            { q: "What is a characteristic of an individual called?", a: "A variable." },
+            { q: "What is the key difference between a population and a sample?", a: "A population is the entire group of interest, while a sample is a subset of that population." },
+            { q: "A measurable characteristic of a population is called a ______, and it's denoted by ______ letters.", a: "Parameter, Greek (e.g., μ, σ)." },
+            { q: "A measurable characteristic of a sample is called a ______, and it's denoted by ______ letters.", a: "Statistic, Latin (e.g., x̄, s)." },
+            { q: "Name the two main types of variables.", a: "Categorical and Quantitative." },
+            { q: "What types of graphs are used for categorical variables?", a: "Pie charts and bar graphs." },
+            { q: "What types of graphs are used for quantitative variables?", a: "Histograms and stemplots." },
+            { q: "What does the acronym SOCS stand for when describing a distribution?", a: "Shape, Outlier, Center, Spread." },
+            { q: "Which measure of center is resistant to outliers?", a: "The Median (M)." },
+            { q: "Which measure of center is NOT resistant to outliers?", a: "The Mean (x̄)." },
+            { q: "In a right-skewed distribution, would you expect the mean to be greater or less than the median?", a: "Greater than the median. The mean is pulled toward the long tail." },
+            { q: "What is the formula for the location of the median?", a: "The (n+1)/2 position in the ordered data." },
+            { q: "If a dataset has an ODD number of observations, how do you find the median?", a: "It is the single middle number in the ordered list." },
+            { q: "If a dataset has an EVEN number of observations, how do you find the median?", a: "It is the average of the two center numbers in the ordered list." },
+            { q: "What does the Interquartile Range (IQR) measure?", a: "The range of the middle 50% of the data (IQR = Q₃ - Q₁)." },
+            { q: "How do you find Q₁ and Q₃ if 'n' is ODD?", a: "Find the median of the lower half and upper half of the data, EXCLUDING the overall median from both halves." },
+            { q: "How do you find Q₁ and Q₃ if 'n' is EVEN?", a: "Find the median of the entire lower half and the entire upper half of the data." },
+            { q: "What is the name for the summary that includes the Minimum, Q₁, Median, Q₃, and Maximum?", a: "The Five-Number Summary." },
+            { q: "What is the rule of thumb for identifying suspected outliers?", a: "The 1.5 x IQR Rule. An observation is an outlier if it's below Q₁ - (1.5 * IQR) or above Q₃ + (1.5 * IQR)." },
+            { q: "Which measures of center and spread should you use for a skewed distribution?", a: "The five-number summary (Median and IQR) because they are resistant." },
+            { q: "What is the symbol for a sample mean, and what is its common name?", a: "x̄, pronounced 'x-bar'." },
+            { q: "What is the symbol for a population mean?", a: "μ (the Greek letter mu)." },
+            { q: "What does the symbol Σ (Sigma) mean in a formula?", a: "It means to sum up, or add all the values." }
+        ];
+
+        const grid = document.getElementById('flashcard-grid');
+
+        flashcards.forEach((cardData, index) => {
+            const cardElement = document.createElement('div');
+            cardElement.className = 'flashcard-container bg-white p-6 rounded-lg shadow-md flex flex-col justify-between';
+            
+            cardElement.innerHTML = `
+                <div>
+                    <p class="font-semibold text-lg text-slate-800 mb-4">${cardData.q}</p>
+                    <textarea id="answer-input-${index}" class="w-full p-2 border border-slate-300 rounded-md focus:ring-2 focus:ring-indigo-500 focus:border-indigo-500" placeholder="Type your answer here..."></textarea>
+                </div>
+                <div class="mt-4">
+                    <button onclick="showAnswer(${index})" class="w-full bg-indigo-600 text-white font-semibold py-2 px-4 rounded-lg hover:bg-indigo-700">Show Answer</button>
+                    <div id="answer-${index}" class="answer mt-3 p-3 bg-emerald-50 border-l-4 border-emerald-500 text-emerald-800 rounded">
+                        <p>${cardData.a}</p>
+                    </div>
+                </div>
+            `;
+            grid.appendChild(cardElement);
+        });
+
+        function showAnswer(index) {
+            const answerEl = document.getElementById(`answer-${index}`);
+            answerEl.style.display = 'block';
+        }
+    </script>
+
 </body>
 </html>

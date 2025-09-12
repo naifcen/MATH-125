@@ -3,287 +3,233 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Comprehensive Statistics Quiz Study Guide</title>
+    <title>Comprehensive Statistics Study Guide</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
     <style>
         body {
             font-family: 'Inter', sans-serif;
         }
-        .concept-card {
-            background-color: #f8fafc; /* slate-50 */
-            border-left: 5px solid #3b82f6; /* blue-500 */
-        }
-        .formula-card {
-            background-color: #f0fdf4; /* green-50 */
-            border-left: 5px solid #22c55e; /* green-500 */
-        }
-        .warning-card {
-            background-color: #fefce8; /* yellow-50 */
-            border-left: 5px solid #eab308; /* yellow-500 */
-        }
-        .exercise-card {
-            background-color: #faf5ff; /* purple-50 */
-            border-left: 5px solid #a855f7; /* purple-500 */
-        }
-        details > summary {
-            cursor: pointer;
-            list-style: none;
-        }
-        details > summary::-webkit-details-marker {
+        .solution {
             display: none;
+            margin-top: 1rem;
+            padding: 1rem;
+            background-color: #f8fafc; /* slate-50 */
+            border-left: 4px solid #10b981; /* emerald-500 */
+        }
+        .concept-card {
+            background-color: white;
+            border-radius: 0.75rem;
+            box-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.1), 0 2px 4px -2px rgb(0 0 0 / 0.1);
+            border: 1px solid #e2e8f0; /* slate-200 */
+        }
+        .warning {
+            background-color: #fef2f2; /* red-50 */
+            border-left: 4px solid #ef4444; /* red-500 */
+            padding: 0.75rem;
+            margin-top: 0.5rem;
+            border-radius: 0.25rem;
+        }
+         .resistant {
+            background-color: #ecfdf5; /* emerald-50 */
+            border-left: 4px solid #10b981; /* emerald-500 */
+            padding: 0.75rem;
+            margin-top: 0.5rem;
+            border-radius: 0.25rem;
         }
     </style>
 </head>
 <body class="bg-slate-100 text-slate-800">
 
     <div class="container mx-auto p-4 sm:p-6 lg:p-8">
-        <header class="text-center mb-10">
-            <h1 class="text-4xl md:text-5xl font-bold text-slate-900">Statistics Study Guide</h1>
-            <p class="text-lg text-slate-600 mt-2">Your complete guide to acing the quiz on Chapters 1 & 2!</p>
+        <header class="text-center mb-10 p-8 bg-white rounded-xl shadow-lg">
+            <h1 class="text-4xl md:text-5xl font-bold text-slate-900">Comprehensive Statistics Study Guide</h1>
+            <p class="text-lg text-slate-600 mt-2">Everything you need to know for your quiz, based on Chapters 1 & 2.</p>
         </header>
 
-        <main>
-            <!-- Chapter 1 Section -->
-            <section class="mb-12">
-                <h2 class="text-3xl font-bold mb-6 pb-2 border-b-2 border-blue-500 text-slate-900">Part 1: Key Concepts from Chapter 1</h2>
-
-                <!-- 1.1 Foundational Terminology -->
-                <div class="mb-8">
-                    <h3 class="text-2xl font-semibold mb-4 text-slate-700">1.1 Foundational Terminology</h3>
-                    <div class="space-y-4">
-                        <div class="concept-card p-4 rounded-lg shadow-sm">
-                            <h4 class="font-bold text-lg text-blue-700">Individuals & Variable</h4>
-                            <p><strong class="font-semibold">Individuals:</strong> The objects described by a set of data.</p>
-                            <p><strong class="font-semibold">Variable:</strong> A characteristic of an individual.</p>
-                        </div>
-                        <div class="concept-card p-4 rounded-lg shadow-sm">
-                            <h4 class="font-bold text-lg text-blue-700">Population & Sample</h4>
-                            <p><strong class="font-semibold">Population:</strong> The <span class="text-blue-600">complete set</span> of individuals in a study.</p>
-                            <p><strong class="font-semibold">Sample:</strong> A <span class="text-blue-600">subset of individuals</span> drawn from the population to make inferences about the whole.</p>
-                        </div>
-                    </div>
-                </div>
+        <!-- Chapter 1 -->
+        <section class="mb-12">
+            <h2 class="text-3xl font-bold text-slate-800 mb-6 pb-2 border-b-2 border-indigo-500">Chapter 1: Picturing Distributions with Graphs</h2>
+            <div class="space-y-8">
                 
-                <!-- 1.2 Parameters vs. Statistics -->
-                <div class="mb-8">
-                    <h3 class="text-2xl font-semibold mb-4 text-slate-700">1.2 Parameters vs. Statistics</h3>
-                     <div class="grid md:grid-cols-2 gap-4">
-                        <div class="concept-card p-4 rounded-lg shadow-sm">
-                            <h4 class="font-bold text-lg text-blue-700">Population Parameter</h4>
-                            <p>A measurable characteristic of a <strong class="font-semibold">population</strong>.</p>
-                            <p class="mt-2 text-sm text-slate-500">Denoted by <strong class="font-semibold">Greek letters</strong> (e.g., μ, σ, ρ).</p>
+                <div class="concept-card p-6">
+                    <h3 class="text-2xl font-semibold mb-3">Foundational Terminology</h3>
+                    <ul class="list-disc list-inside space-y-2 text-slate-700">
+                        <li><strong>Individuals:</strong> The objects described by a set of data.</li>
+                        <li><strong>Variable:</strong> A characteristic of an individual.</li>
+                        <li><strong>Population:</strong> The complete set of individuals of interest.</li>
+                        <li><strong>Sample:</strong> A subset of the population from which we actually collect data.</li>
+                    </ul>
+                </div>
+
+                <div class="concept-card p-6">
+                    <h3 class="text-2xl font-semibold mb-3">Parameters vs. Statistics</h3>
+                     <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+                        <div>
+                            <h4 class="text-lg font-semibold text-sky-700">Population Parameter</h4>
+                            <p>A measurable characteristic of a population, denoted by <strong class="text-sky-600">Greek letters</strong> (e.g., μ, σ, ρ).</p>
                         </div>
-                        <div class="concept-card p-4 rounded-lg shadow-sm">
-                           <h4 class="font-bold text-lg text-blue-700">Sample Statistic</h4>
-                           <p>A measurable characteristic of a <strong class="font-semibold">sample</strong>.</p>
-                           <p class="mt-2 text-sm text-slate-500">Denoted by <strong class="font-semibold">Latin letters</strong> (e.g., x̄, s, r).</p>
+                        <div>
+                            <h4 class="text-lg font-semibold text-amber-700">Sample Statistic</h4>
+                            <p>A measurable characteristic of a sample, denoted by <strong class="text-amber-600">Latin letters</strong> (e.g., x̄, s, r).</p>
                         </div>
                     </div>
                 </div>
 
-                <!-- 1.3 Types of Variables -->
-                <div class="mb-8">
-                    <h3 class="text-2xl font-semibold mb-4 text-slate-700">1.3 Types of Variables</h3>
-                     <div class="grid md:grid-cols-2 gap-4">
-                        <div class="concept-card p-4 rounded-lg shadow-sm">
-                            <h4 class="font-bold text-lg text-blue-700">Categorical Variable</h4>
-                            <p>Assigns individuals to groups or categories.</p>
-                            <p class="mt-2 text-sm text-slate-500">Graphs: Pie Charts, Bar Graphs.</p>
+                <div class="concept-card p-6">
+                    <h3 class="text-2xl font-semibold mb-3">Types of Variables</h3>
+                    <ul class="list-disc list-inside space-y-2 text-slate-700">
+                        <li><strong>Categorical Variable:</strong> Assigns individuals to distinct groups. (Graphs: Pie Charts, Bar Graphs)</li>
+                        <li><strong>Quantitative Variable:</strong> Takes on numerical values where arithmetic operations are meaningful. (Graphs: Histograms, Stemplots)</li>
+                    </ul>
+                </div>
+
+                <div class="concept-card p-6">
+                    <h3 class="text-2xl font-semibold mb-3">Exploratory Data Analysis (SOCS)</h3>
+                    <p class="mb-2">When examining a distribution, always describe the following:</p>
+                    <ul class="list-disc list-inside space-y-2 font-semibold text-indigo-700">
+                        <li><strong>S</strong>hape: Symmetric, skewed-right, or skewed-left?</li>
+                        <li><strong>O</strong>utlier: Are there any values that fall far from the overall pattern?</li>
+                        <li><strong>C</strong>enter: Where is the midpoint of the data?</li>
+                        <li><strong>S</strong>pread: How spread out is the data?</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <!-- Chapter 2 -->
+        <section class="mb-12">
+            <h2 class="text-3xl font-bold text-slate-800 mb-6 pb-2 border-b-2 border-indigo-500">Chapter 2: Describing Distributions with Numbers</h2>
+             <div class="space-y-8">
+                <div class="concept-card p-6">
+                    <h3 class="text-2xl font-semibold mb-3">Measures of Center</h3>
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                        <div>
+                            <h4 class="text-xl font-semibold">Mean (x̄)</h4>
+                            <p>The arithmetic average. Formula: <strong class="font-mono">x̄ = (Σxᵢ) / n</strong></p>
+                            <div class="warning"><p>The mean is <strong class="font-semibold">NOT a resistant measure</strong>; it's sensitive to outliers.</p></div>
                         </div>
-                        <div class="concept-card p-4 rounded-lg shadow-sm">
-                           <h4 class="font-bold text-lg text-blue-700">Quantitative Variable</h4>
-                           <p>Takes numerical values where arithmetic is meaningful.</p>
-                           <p class="mt-2 text-sm text-slate-500">Graphs: Histograms, Stemplots.</p>
+                        <div>
+                            <h4 class="text-xl font-semibold">Median (M)</h4>
+                            <p>The midpoint of a distribution. Found at position <strong class="font-mono">(n+1)/2</strong> in an ordered list.</p>
+                            <div class="resistant"><p>The median <strong class="font-semibold">IS a resistant measure</strong>; it's not affected by outliers.</p></div>
                         </div>
                     </div>
-                </div>
-                
-                <!-- 1.4 EDA -->
-                <div class="mb-8">
-                     <h3 class="text-2xl font-semibold mb-4 text-slate-700">1.4 Exploratory Data Analysis (SOCS)</h3>
-                     <div class="concept-card p-4 rounded-lg shadow-sm">
-                        <p>When examining a graph, always describe the following:</p>
-                        <ul class="list-disc list-inside mt-2 space-y-1">
-                            <li><strong class="font-semibold text-blue-600">S</strong>hape: Symmetric, Skewed Right, or Skewed Left.</li>
-                            <li><strong class="font-semibold text-blue-600">O</strong>utlier: Any values that deviate from the overall pattern.</li>
-                            <li><strong class="font-semibold text-blue-600">C</strong>enter: The midpoint of the data.</li>
-                            <li><strong class="font-semibold text-blue-600">S</strong>pread: The variability or range of the data.</li>
+                    <div class="mt-4 p-4 bg-slate-50 rounded-lg border">
+                        <h4 class="font-semibold text-slate-800 mb-2">Finding the Median:</h4>
+                         <ul class="list-disc list-inside space-y-2 text-slate-700">
+                             <li>If 'n' is <strong class="text-indigo-600">ODD</strong>, the Median is the single middle value.</li>
+                             <li>If 'n' is <strong class="text-indigo-600">EVEN</strong>, the Median is the average of the two middle values.</li>
                         </ul>
-                     </div>
-                </div>
-            </section>
-            
-            <!-- Chapter 2 Section -->
-            <section class="mb-12">
-                <h2 class="text-3xl font-bold mb-6 pb-2 border-b-2 border-green-500 text-slate-900">Part 2: Key Concepts from Chapter 2</h2>
-
-                <!-- 2.1 Measures of Center -->
-                <div class="mb-8">
-                    <h3 class="text-2xl font-semibold mb-4 text-slate-700">2.1 Measures of Center</h3>
-                    <div class="grid md:grid-cols-2 gap-4">
-                        <div class="concept-card p-4 rounded-lg shadow-sm">
-                            <h4 class="font-bold text-lg text-blue-700">Mean (x̄)</h4>
-                            <p>The arithmetic average of the data.</p>
-                            <div class="formula-card mt-2 p-2 rounded">
-                                 <p class="text-center font-mono">x̄ = (Σxᵢ) / n</p>
-                            </div>
-                            <div class="warning-card mt-2 p-2 rounded">
-                                <p class="text-sm">⚠️ <strong class="font-semibold">Not Resistant:</strong> Heavily influenced by outliers.</p>
-                            </div>
-                        </div>
-                        <div class="concept-card p-4 rounded-lg shadow-sm">
-                            <h4 class="font-bold text-lg text-blue-700">Median (M)</h4>
-                            <p>The midpoint of an ordered dataset.</p>
-                            <div class="formula-card mt-2 p-2 rounded">
-                                 <p class="text-center font-mono">Location = (n + 1) / 2</p>
-                            </div>
-                             <div class="formula-card border-green-500 mt-2 p-2 rounded">
-                                <p class="text-sm text-green-800">✅ <strong class="font-semibold">Resistant:</strong> Not affected by outliers.</p>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="concept-card p-4 rounded-lg shadow-sm mt-4">
-                        <h4 class="font-bold text-lg text-blue-700">Mean vs. Median in Skewed Distributions</h4>
-                        <p><strong class="font-semibold">Right-Skewed:</strong> Mean > Median</p>
-                        <p><strong class="font-semibold">Left-Skewed:</strong> Mean < Median</p>
-                        <p><strong class="font-semibold">Symmetric:</strong> Mean ≈ Median</p>
                     </div>
                 </div>
 
-                <!-- 2.2 Measures of Variability -->
-                <div class="mb-8">
-                    <h3 class="text-2xl font-semibold mb-4 text-slate-700">2.2 Measures of Variability (Spread)</h3>
-                    <div class="space-y-4">
-                       <div class="concept-card p-4 rounded-lg shadow-sm">
-                            <h4 class="font-bold text-lg text-blue-700">Quartiles & IQR</h4>
-                            <p><strong class="font-semibold">Quartiles (Q₁, Q₃):</strong> Values that divide the data into four equal parts.</p>
-                            <p><strong class="font-semibold">Interquartile Range (IQR):</strong> A resistant measure of spread for the middle 50% of data.</p>
-                            <div class="formula-card mt-2 p-2 rounded">
-                                 <p class="text-center font-mono">IQR = Q₃ - Q₁</p>
+                <div class="concept-card p-6">
+                    <h3 class="text-2xl font-semibold mb-3">Measures of Variability (Spread)</h3>
+                     <div class="space-y-4">
+                        <div>
+                            <h4 class="text-xl font-semibold">Quartiles (Q₁, Q₃) and IQR</h4>
+                            <p>Quartiles divide the data into four equal parts. The Interquartile Range (IQR) measures the range of the middle 50% of the data.</p>
+                            <p class="font-semibold">Formula: <strong class="font-mono">IQR = Q₃ - Q₁</strong></p>
+                            <div class="resistant"><p>Quartiles and IQR <strong class="font-semibold">ARE resistant measures</strong>.</p></div>
+                            <div class="mt-4 p-4 bg-slate-50 rounded-lg border">
+                                <h4 class="font-semibold text-slate-800 mb-2">Finding the Quartiles:</h4>
+                                <ul class="list-disc list-inside space-y-2 text-slate-700">
+                                     <li><strong>Q₁ (First Quartile):</strong> The median of the lower half of the data.</li>
+                                     <li><strong>Q₃ (Third Quartile):</strong> The median of the upper half of the data.</li>
+                                     <li>When 'n' is odd, do not include the overall Median in the lower or upper halves when finding quartiles.</li>
+                                </ul>
                             </div>
-                       </div>
-                        <div class="concept-card p-4 rounded-lg shadow-sm">
-                            <h4 class="font-bold text-lg text-blue-700">Standard Deviation (s)</h4>
-                            <p>The most common measure of spread, representing the typical distance of an observation from the mean.</p>
-                            <div class="formula-card mt-2 p-2 rounded">
-                                 <p class="text-center font-mono">s = √[ Σ(xᵢ - x̄)² / (n-1) ]</p>
-                            </div>
-                            <div class="warning-card mt-2 p-2 rounded">
-                                <p class="text-sm">⚠️ <strong class="font-semibold">Not Resistant:</strong> Heavily influenced by outliers.</p>
-                            </div>
+                        </div>
+                        <div>
+                            <h4 class="text-xl font-semibold">Standard Deviation (s)</h4>
+                            <p>The most common measure of spread, it measures the typical distance of observations from the mean. It is the square root of the variance (s²).</p>
+                             <div class="warning"><p>Standard Deviation is <strong class="font-semibold">NOT a resistant measure</strong>.</p></div>
                         </div>
                     </div>
                 </div>
 
-                <!-- 2.3 Summaries and Plots -->
-                <div class="mb-8">
-                    <h3 class="text-2xl font-semibold mb-4 text-slate-700">2.3 Summaries and Plots</h3>
-                    <div class="space-y-4">
-                        <div class="concept-card p-4 rounded-lg shadow-sm">
-                            <h4 class="font-bold text-lg text-blue-700">The Five-Number Summary & Boxplot</h4>
-                            <p>A resistant summary of the data, visualized by a boxplot.</p>
-                            <p class="font-semibold mt-2 text-center text-blue-600">Minimum | Q₁ | Median | Q₃ | Maximum</p>
-                        </div>
-                        <div class="formula-card p-4 rounded-lg shadow-sm">
-                            <h4 class="font-bold text-lg text-green-700">Identifying Outliers (1.5 x IQR Rule)</h4>
-                            <p>An observation is a suspected outlier if it is outside these bounds:</p>
-                            <p class="mt-2"><strong class="font-semibold">Lower Bound:</strong> Q₁ - (1.5 × IQR)</p>
-                            <p><strong class="font-semibold">Upper Bound:</strong> Q₃ + (1.5 × IQR)</p>
-                        </div>
-                    </div>
+                <div class="concept-card p-6">
+                    <h3 class="text-2xl font-semibold mb-3">The Five-Number Summary & Boxplots</h3>
+                    <p>A summary of a distribution consisting of: <strong class="font-semibold">Minimum, Q₁, Median, Q₃, Maximum</strong>.</p>
+                    <p>A <strong class="text-indigo-600">Boxplot</strong> is a visual representation of the five-number summary.</p>
                 </div>
-            </section>
-            
-            <!-- Practice Exercises Section -->
-            <section>
-                 <h2 class="text-3xl font-bold mb-6 pb-2 border-b-2 border-purple-500 text-slate-900">Part 3: Practice Exercises</h2>
+                
+                 <div class="concept-card p-6">
+                    <h3 class="text-2xl font-semibold mb-3">Identifying Outliers: The 1.5 x IQR Rule</h3>
+                    <p>An observation is a suspected outlier if it falls outside these boundaries:</p>
+                    <ul class="list-disc list-inside space-y-2 font-mono text-slate-700 mt-2 bg-slate-100 p-4 rounded-md">
+                        <li><strong>Lower Bound:</strong> Q₁ - (1.5 × IQR)</li>
+                        <li><strong>Upper Bound:</strong> Q₃ + (1.5 × IQR)</li>
+                    </ul>
+                </div>
 
+            </div>
+        </section>
+        
+        <!-- Practice Exercises -->
+        <section>
+            <h2 class="text-3xl font-bold text-slate-800 mb-6 pb-2 border-b-2 border-indigo-500">Practice Exercises</h2>
+            <div class="space-y-6">
                  <!-- Exercise 1 -->
-                 <div class="exercise-card p-6 rounded-lg shadow-sm mb-6">
-                    <h3 class="text-xl font-bold text-purple-700 mb-3">Exercise 1: Stemplots</h3>
-                    <p class="mb-4">The following data represent the final exam scores for 15 students:
-                    <code class="bg-purple-100 text-purple-800 rounded px-2 py-1">84, 95, 76, 88, 91, 72, 65, 88, 79, 90, 88, 76, 81, 90, 68</code></p>
-                    <p>a) Create a stemplot for this data.</p>
-                    <p>b) Describe the shape of the distribution.</p>
-                    <details class="mt-4">
-                        <summary class="inline-flex items-center bg-purple-500 text-white font-semibold py-2 px-4 rounded-lg hover:bg-purple-600 transition-colors">
-                            <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 mr-2" viewBox="0 0 20 20" fill="currentColor"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm1-11a1 1 0 10-2 0v3.586L7.707 9.293a1 1 0 00-1.414 1.414l3 3a1 1 0 001.414 0l3-3a1 1 0 00-1.414-1.414L11 10.586V7z" clip-rule="evenodd" /></svg>
-                            Show Solution
-                        </summary>
-                        <div class="mt-4 p-4 bg-white rounded-md border border-purple-200">
-                           <p><strong class="font-semibold">Ordered Data:</strong> <code class="text-sm">65, 68, 72, 76, 76, 79, 81, 84, 88, 88, 88, 90, 90, 91, 95</code></p>
-                           <p class="font-semibold mt-2">a) Stemplot:</p>
-                           <pre class="bg-slate-100 p-3 rounded-md mt-1 font-mono text-sm">6 | 5 8
+                <div>
+                    <h3 class="text-xl font-semibold">Exercise 1: Stemplots</h3>
+                    <p>Data: `84, 95, 76, 88, 91, 72, 65, 88, 79, 90, 88, 76, 81, 90, 68`</p>
+                    <button onclick="toggleSolution('sol1')" class="mt-2 bg-indigo-600 text-white font-semibold py-2 px-4 rounded-lg hover:bg-indigo-700">Show Solution</button>
+                    <div id="sol1" class="solution">
+                        <p><strong>Ordered Data:</strong> `65, 68, 72, 76, 76, 79, 81, 84, 88, 88, 88, 90, 90, 91, 95`</p>
+                        <pre class="bg-white p-2 rounded mt-2">6 | 5 8
 7 | 2 6 6 9
 8 | 1 4 8 8 8
 9 | 0 0 1 5</pre>
-                           <p class="font-semibold mt-2">b) Shape:</p>
-                           <p>The distribution is roughly symmetric, with a possible slight skew to the left.</p>
-                        </div>
-                    </details>
-                 </div>
-                 
+                        <p><strong>Shape:</strong> Roughly symmetric, with a slight left skew.</p>
+                    </div>
+                </div>
                  <!-- Exercise 2 -->
-                 <div class="exercise-card p-6 rounded-lg shadow-sm mb-6">
-                    <h3 class="text-xl font-bold text-purple-700 mb-3">Exercise 2: Numerical Summaries</h3>
-                    <p class="mb-4">Using the same biology exam scores from Exercise 1, calculate:</p>
-                    <p>a) The mean score.</p>
-                    <p>b) The median score.</p>
-                    <p>c) Is the data likely symmetric or skewed?</p>
-                     <details class="mt-4">
-                        <summary class="inline-flex items-center bg-purple-500 text-white font-semibold py-2 px-4 rounded-lg hover:bg-purple-600 transition-colors">
-                            <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 mr-2" viewBox="0 0 20 20" fill="currentColor"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm1-11a1 1 0 10-2 0v3.586L7.707 9.293a1 1 0 00-1.414 1.414l3 3a1 1 0 001.414 0l3-3a1 1 0 00-1.414-1.414L11 10.586V7z" clip-rule="evenodd" /></svg>
-                            Show Solution
-                        </summary>
-                        <div class="mt-4 p-4 bg-white rounded-md border border-purple-200">
-                           <p><strong class="font-semibold">a) Mean (x̄):</strong> 1231 / 15 ≈ <strong class="text-purple-700">82.07</strong></p>
-                           <p><strong class="font-semibold">b) Median (M):</strong> The 8th value in the ordered list is <strong class="text-purple-700">84</strong>.</p>
-                           <p><strong class="font-semibold">c) Conclusion:</strong> Since the mean (82.07) is less than the median (84), the data is likely slightly <strong class="text-purple-700">skewed to the left</strong>.</p>
-                        </div>
-                    </details>
-                 </div>
-                 
+                <div>
+                    <h3 class="text-xl font-semibold">Exercise 2: Numerical Summaries</h3>
+                    <p>Using the same data from Exercise 1.</p>
+                    <button onclick="toggleSolution('sol2')" class="mt-2 bg-indigo-600 text-white font-semibold py-2 px-4 rounded-lg hover:bg-indigo-700">Show Solution</button>
+                    <div id="sol2" class="solution">
+                        <p><strong>Mean (x̄):</strong> (1231 / 15) ≈ 82.07</p>
+                        <p><strong>Median (M):</strong> n=15 (odd). Location is (15+1)/2 = 8th value. Median = 84.</p>
+                        <p><strong>Conclusion:</strong> Since the mean (82.07) is less than the median (84), the distribution is slightly skewed to the left.</p>
+                    </div>
+                </div>
                  <!-- Exercise 3 -->
-                 <div class="exercise-card p-6 rounded-lg shadow-sm mb-6">
-                    <h3 class="text-xl font-bold text-purple-700 mb-3">Exercise 3: Five-Number Summary & Outliers</h3>
-                    <p class="mb-4">Number of minutes 12 customers spent in a store:
-                    <code class="bg-purple-100 text-purple-800 rounded px-2 py-1">15, 41, 12, 18, 22, 25, 17, 33, 21, 28, 9, 39</code></p>
-                    <p>a) Find the five-number summary.</p>
-                    <p>b) Calculate the IQR.</p>
-                    <p>c) Determine if there are any outliers.</p>
-                     <details class="mt-4">
-                        <summary class="inline-flex items-center bg-purple-500 text-white font-semibold py-2 px-4 rounded-lg hover:bg-purple-600 transition-colors">
-                            <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 mr-2" viewBox="0 0 20 20" fill="currentColor"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm1-11a1 1 0 10-2 0v3.586L7.707 9.293a1 1 0 00-1.414 1.414l3 3a1 1 0 001.414 0l3-3a1 1 0 00-1.414-1.414L11 10.586V7z" clip-rule="evenodd" /></svg>
-                            Show Solution
-                        </summary>
-                        <div class="mt-4 p-4 bg-white rounded-md border border-purple-200">
-                           <p><strong class="font-semibold">Ordered Data:</strong> <code class="text-sm">9, 12, 15, 17, 18, 21, 22, 25, 28, 33, 39, 41</code></p>
-                           <p><strong class="font-semibold mt-2">a) Five-Number Summary:</strong></p>
-                           <ul class="list-disc list-inside">
-                               <li>Minimum: <strong class="text-purple-700">9</strong></li>
-                               <li>Q₁: (15+17)/2 = <strong class="text-purple-700">16</strong></li>
-                               <li>Median: (21+22)/2 = <strong class="text-purple-700">21.5</strong></li>
-                               <li>Q₃: (28+33)/2 = <strong class="text-purple-700">30.5</strong></li>
-                               <li>Maximum: <strong class="text-purple-700">41</strong></li>
-                           </ul>
-                           <p><strong class="font-semibold mt-2">b) IQR:</strong> 30.5 - 16 = <strong class="text-purple-700">14.5</strong></p>
-                           <p><strong class="font-semibold mt-2">c) Outliers:</strong></p>
-                            <ul class="list-disc list-inside">
-                               <li>Lower Bound: 16 - (1.5 * 14.5) = -5.75</li>
-                               <li>Upper Bound: 30.5 + (1.5 * 14.5) = 52.25</li>
-                               <li>Conclusion: <strong class="text-purple-700">No outliers</strong>, as all data points fall within the bounds.</li>
-                           </ul>
-                        </div>
-                    </details>
-                 </div>
-                 
-            </section>
-        </main>
+                <div>
+                    <h3 class="text-xl font-semibold">Exercise 3: Five-Number Summary & Outliers</h3>
+                     <p>Data: `15, 41, 12, 18, 22, 25, 17, 33, 21, 28, 9, 39`</p>
+                    <button onclick="toggleSolution('sol3')" class="mt-2 bg-indigo-600 text-white font-semibold py-2 px-4 rounded-lg hover:bg-indigo-700">Show Solution</button>
+                    <div id="sol3" class="solution">
+                        <p><strong>Ordered Data:</strong> `9, 12, 15, 17, 18, 21, 22, 25, 28, 33, 39, 41`</p>
+                        <p><strong>Five-Number Summary:</strong></p>
+                        <ul class="list-disc list-inside">
+                            <li>Minimum = 9</li>
+                            <li>Q₁ = (15+17)/2 = 16</li>
+                            <li>Median = (21+22)/2 = 21.5</li>
+                            <li>Q₃ = (28+33)/2 = 30.5</li>
+                            <li>Maximum = 41</li>
+                        </ul>
+                         <p class="mt-2"><strong>IQR:</strong> 30.5 - 16 = 14.5</p>
+                         <p class="mt-2"><strong>Outlier Check:</strong> Lower Bound = 16 - (1.5 * 14.5) = -5.75. Upper Bound = 30.5 + (1.5 * 14.5) = 52.25. There are <strong>no outliers</strong>.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
         
-        <footer class="text-center mt-12 pt-6 border-t border-slate-300">
-            <p class="text-slate-500">Good luck with your quiz! You've got this.</p>
-        </footer>
     </div>
+
+    <script>
+        function toggleSolution(id) {
+            const el = document.getElementById(id);
+            if (el.style.display === 'block') {
+                el.style.display = 'none';
+            } else {
+                el.style.display = 'block';
+            }
+        }
+    </script>
+
 </body>
 </html>

@@ -82,7 +82,7 @@
 
 
         <!-- Key Formulas Section -->
-        <section>
+        <section class="mb-12">
             <h2 class="text-3xl font-bold text-slate-800 mb-6 pb-2 border-b-2 border-indigo-500">Key Formulas</h2>
             <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
 
@@ -124,7 +124,38 @@
                          <p class="font-mono text-lg bg-slate-100 p-2 rounded"><strong>Upper Bound:</strong> Q₃ + (1.5 × IQR)</p>
                     </div>
                 </div>
-
+            </div>
+        </section>
+        
+        <!-- Calculation Details Section -->
+        <section>
+            <h2 class="text-3xl font-bold text-slate-800 mb-6 pb-2 border-b-2 border-indigo-500">Calculation Details</h2>
+             <div class="bg-white p-6 rounded-lg shadow-md">
+                <div class="formula-card p-5 rounded-lg shadow-sm">
+                    <h3 class="text-lg font-semibold text-indigo-800">Finding the Median (M) and Quartiles (Q₁, Q₃)</h3>
+                    <p class="text-slate-600 text-sm mb-3">The method depends on whether the number of observations (n) is odd or even.</p>
+                    
+                    <div class="mt-4 grid grid-cols-1 md:grid-cols-2 gap-4">
+                        <!-- Odd N -->
+                        <div class="bg-slate-50 p-4 rounded-lg">
+                            <h4 class="font-semibold text-slate-800 mb-2">If 'n' is ODD:</h4>
+                            <ul class="list-decimal list-inside space-y-2 text-slate-700">
+                                <li><strong>Median (M):</strong> The single middle value in the ordered dataset.</li>
+                                <li><strong>First Quartile (Q₁):</strong> The median of the lower half of numbers (the values to the left of the Median).</li>
+                                <li><strong>Third Quartile (Q₃):</strong> The median of the upper half of numbers (the values to the right of the Median).</li>
+                            </ul>
+                        </div>
+                        <!-- Even N -->
+                        <div class="bg-slate-50 p-4 rounded-lg">
+                             <h4 class="font-semibold text-slate-800 mb-2">If 'n' is EVEN:</h4>
+                            <ul class="list-decimal list-inside space-y-2 text-slate-700">
+                                <li><strong>Median (M):</strong> The average of the two middle values in the ordered dataset.</li>
+                                <li><strong>First Quartile (Q₁):</strong> The median of the entire lower half of the dataset.</li>
+                                <li><strong>Third Quartile (Q₃):</strong> The median of the entire upper half of the dataset.</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
             </div>
         </section>
 
