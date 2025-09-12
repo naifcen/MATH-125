@@ -51,9 +51,8 @@
 
 
         <main>
-            <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
 
-                <!-- Card 1: Full Study Guide -->
                 <div class="hub-card bg-white rounded-lg shadow-md overflow-hidden flex flex-col">
                     <div class="p-6 bg-blue-500 text-white flex items-center space-x-4">
                          <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8" viewBox="0 0 20 20" fill="currentColor"><path d="M9 4.804A7.968 7.968 0 005.5 4c-1.255 0-2.443.29-3.5.804v10.392C2.057 15.71 3.245 16 4.5 16s2.443-.29 3.5-.804V6.392c1.057-.514 2.245-.804 3.5-.804s2.443.29 3.5.804v8.804c-1.057.514-2.245.804-3.5.804s-2.443-.29-3.5-.804V14" /></svg>
@@ -69,7 +68,6 @@
                     </div>
                 </div>
 
-                <!-- Card 2: Concept Flashcards -->
                 <div class="hub-card bg-white rounded-lg shadow-md overflow-hidden flex flex-col">
                      <div class="p-6 bg-indigo-500 text-white flex items-center space-x-4">
                         <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8" viewBox="0 0 20 20" fill="currentColor"><path d="M5 4a2 2 0 012-2h6a2 2 0 012 2v1H5V4zM5 8h10a1 1 0 011 1v6a1 1 0 01-1 1H5a1 1 0 01-1-1v-6a1 1 0 011-1z" /></svg>
@@ -85,7 +83,6 @@
                     </div>
                 </div>
 
-                <!-- Card 3: Symbols & Formulas Cheatsheet -->
                 <div class="hub-card bg-white rounded-lg shadow-md overflow-hidden flex flex-col">
                      <div class="p-6 bg-teal-500 text-white flex items-center space-x-4">
                         <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8" viewBox="0 0 20 20" fill="currentColor"><path fill-rule="evenodd" d="M7 2a1 1 0 00-.707 1.707L8.586 6H6a1 1 0 000 2h3.586l-2.293 2.293a1 1 0 101.414 1.414l3-3a1 1 0 000-1.414l-3-3A1 1 0 007 2zM13 2a1 1 0 011 1v12a1 1 0 11-2 0V3a1 1 0 011-1z" clip-rule="evenodd" /></svg>
@@ -101,7 +98,6 @@
                     </div>
                 </div>
                 
-                <!-- Card 4: Practice Problems -->
                 <div class="hub-card bg-white rounded-lg shadow-md overflow-hidden flex flex-col">
                     <div class="p-6 bg-purple-500 text-white flex items-center space-x-4">
                         <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8" viewBox="0 0 20 20" fill="currentColor"><path fill-rule="evenodd" d="M12.707 5.293a1 1 0 010 1.414L9.414 10l3.293 3.293a1 1 0 01-1.414 1.414l-4-4a1 1 0 010-1.414l4-4a1 1 0 011.414 0z" clip-rule="evenodd" /></svg>
@@ -120,15 +116,32 @@
                     </div>
                 </div>
 
+                <div class="hub-card bg-white rounded-lg shadow-md overflow-hidden flex flex-col">
+                    <div class="p-6 bg-green-500 text-white flex items-center space-x-4">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8" viewBox="0 0 20 20" fill="currentColor">
+                            <path fill-rule="evenodd" d="M18 10a8 8 0 11-16 0 8 8 0 0116 0zm-7-4a1 1 0 11-2 0 1 1 0 012 0zM9 9a1 1 0 000 2v3a1 1 0 001 1h1a1 1 0 100-2v-3a1 1 0 00-1-1H9z" clip-rule="evenodd" />
+                        </svg>
+                        <h2 class="text-2xl font-bold">Submit Feedback</h2>
+                    </div>
+                    <div class="p-6 flex-grow">
+                        <p class="text-slate-600 mb-6">Found a mistake or have a suggestion? Let me know so I can fix it for everyone! All feedback is appreciated.</p>
+                    </div>
+                     <div class="p-6 bg-slate-50 border-t">
+                        <a href="https://docs.google.com/forms/d/e/1FAIpQLSdHD17Ljn671sVsGfX1ie23ZUDAvpRDTcGs0WK3RyfO26FolA/viewform?usp=header" target="_blank" class="btn-primary block w-full text-center bg-green-600 text-white font-semibold py-3 px-4 rounded-lg hover:bg-green-700">
+                            Open Feedback Form
+                        </a>
+                    </div>
+                </div>
+
             </div>
         </main>
     </div>
     
     <footer class="text-center py-6 border-t border-slate-200 bg-white shadow-inner">
         <p class="text-slate-500">Everything you need to prepare for your quiz. Good luck!</p>
-        <p class="text-slate-500">Naif Alqurashi</p>
+        <p class="text-sm mt-2"><a href="https://docs.google.com/forms/d/e/1FAIpQLSdHD17Ljn671sVsGfX1ie23ZUDAvpRDTcGs0WK3RyfO26FolA/viewform?usp=header" target="_blank" class="text-indigo-600 hover:underline">Submit Feedback or Report an Error</a></p>
+        <p class="text-slate-500 mt-2">Naif Alqurashi</p>
     </footer>
 
 </body>
 </html>
-
