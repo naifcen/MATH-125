@@ -46,6 +46,7 @@
                          <div class="space-y-3">
                             <p class="flex items-center"><span class="font-mono text-2xl text-amber-600 w-12">x̄</span><span>Sample Mean <i class="text-amber-500 ml-2">(x-bar)</i></span></p>
                             <p class="flex items-center"><span class="font-mono text-2xl text-amber-600 w-12">s</span><span>Sample Standard Deviation</span></p>
+                             <p class="flex items-center"><span class="font-mono text-2xl text-amber-600 w-12">s²</span><span>Sample Variance</span></p>
                              <p class="flex items-center"><span class="font-mono text-2xl text-amber-600 w-12">r</span><span>Sample Correlation Coefficient</span></p>
                         </div>
                     </div>
@@ -60,6 +61,25 @@
                     </div>
             </div>
         </section>
+
+        <!-- Mathematical Notations Section -->
+        <section class="mb-12">
+            <h2 class="text-3xl font-bold text-slate-800 mb-6 pb-2 border-b-2 border-indigo-500">Mathematical Notations</h2>
+            <div class="bg-white p-6 rounded-lg shadow-md">
+                <div class="formula-card p-5 rounded-lg shadow-sm">
+                    <h3 class="text-lg font-semibold text-indigo-800">Summation Notation (Σxᵢ)</h3>
+                    <p class="text-slate-600 text-sm mb-3">A shorthand way to express the sum of all values in a dataset.</p>
+                    <div class="font-mono text-xl bg-slate-100 p-3 rounded text-center">
+                        Σxᵢ = x₁ + x₂ + ... + xₙ
+                    </div>
+                    <div class="mt-4 space-y-2 text-slate-700">
+                        <p><strong class="font-semibold text-indigo-700">Σ (Sigma):</strong> Means "sum up" or "add all."</p>
+                        <p><strong class="font-semibold text-indigo-700">xᵢ:</strong> Represents each individual observation in the dataset, from the first (x₁) to the last (xₙ).</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
 
         <!-- Key Formulas Section -->
         <section>
@@ -85,12 +105,18 @@
                 </div>
                 
                  <div class="formula-card p-5 rounded-lg shadow-sm">
-                    <h3 class="text-lg font-semibold text-indigo-800">Variance (s²)</h3>
+                    <h3 class="text-lg font-semibold text-indigo-800">Sample Variance (s²)</h3>
                     <p class="text-slate-600 text-sm mb-3">The average of the squared deviations from the mean.</p>
                     <p class="font-mono text-xl bg-slate-100 p-3 rounded text-center">s² = Σ(xᵢ - x̄)² / (n-1)</p>
                 </div>
+                
+                 <div class="formula-card p-5 rounded-lg shadow-sm">
+                    <h3 class="text-lg font-semibold text-indigo-800">Sample Standard Deviation (s)</h3>
+                    <p class="text-slate-600 text-sm mb-3">The square root of the variance. Measures the typical distance from the mean.</p>
+                    <p class="font-mono text-xl bg-slate-100 p-3 rounded text-center">s = √s²</p>
+                </div>
 
-                <div class="formula-card p-5 rounded-lg shadow-sm md:col-span-2">
+                <div class="formula-card p-5 rounded-lg shadow-sm">
                     <h3 class="text-lg font-semibold text-indigo-800">Outlier Fences (1.5 x IQR Rule)</h3>
                     <p class="text-slate-600 text-sm mb-3">Calculates the boundaries for identifying suspected outliers.</p>
                     <div class="mt-3 space-y-2">
