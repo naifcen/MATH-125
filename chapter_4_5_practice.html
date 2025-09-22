@@ -6,6 +6,14 @@
     <title>Chapters 4 & 5 Practice</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <script>
+    MathJax = {
+      tex: {
+        inlineMath: [['$', '$'], ['\\(', '\\)']]
+      }
+    };
+    </script>
+    <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
     <style>
         body {
             font-family: 'Inter', sans-serif;
@@ -47,21 +55,23 @@
 
                     <div class="exercise-card p-6 rounded-lg shadow-md">
                         <h3 class="text-xl font-bold text-purple-800 mb-3">Problem 1: Absences and Exam Scores</h3>
-                        [cite_start]<p class="mb-4">Does the number of class absences explain differences in final exam scores among students in a statistics class? [cite: 1779] Consider the following data:</p>
-                        <table class="min-w-full bg-white border border-gray-200 mt-2">
-                            <thead class="bg-gray-50">
-                                <tr>
-                                    <th class="py-2 px-4 border-b">Number of class absences</th>
-                                    <th class="py-2 px-4 border-b">0</th><th class="py-2 px-4 border-b">1</th><th class="py-2 px-4 border-b">2</th><th class="py-2 px-4 border-b">3</th><th class="py-2 px-4 border-b">4</th><th class="py-2 px-4 border-b">5</th><th class="py-2 px-4 border-b">6</th>
-                                </tr>
-                            </thead>
-                            <tbody>
-                                <tr>
-                                    <td class="py-2 px-4 border-b font-semibold text-center">Final exam scores</td>
-                                    <td class="py-2 px-4 border-b text-center">95</td><td class="py-2 px-4 border-b text-center">92</td><td class="py-2 px-4 border-b text-center">88</td><td class="py-2 px-4 border-b text-center">82</td><td class="py-2 px-4 border-b text-center">73</td><td class="py-2 px-4 border-b text-center">70</td><td class="py-2 px-4 border-b text-center">62</td>
-                                </tr>
-                            </tbody>
-                        </table>
+                        <p class="mb-4">Does the number of class absences explain differences in final exam scores among students in a statistics class? Consider the following data:</p>
+                        <div class="overflow-x-auto">
+                            <table class="min-w-full bg-white border border-gray-200 mt-2">
+                                <thead class="bg-gray-50">
+                                    <tr>
+                                        <th class="py-2 px-4 border-b">Number of class absences</th>
+                                        <th class="py-2 px-4 border-b">0</th><th class="py-2 px-4 border-b">1</th><th class="py-2 px-4 border-b">2</th><th class="py-2 px-4 border-b">3</th><th class="py-2 px-4 border-b">4</th><th class="py-2 px-4 border-b">5</th><th class="py-2 px-4 border-b">6</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td class="py-2 px-4 border-b font-semibold text-center">Final exam scores</td>
+                                        <td class="py-2 px-4 border-b text-center">95</td><td class="py-2 px-4 border-b text-center">92</td><td class="py-2 px-4 border-b text-center">88</td><td class="py-2 px-4 border-b text-center">82</td><td class="py-2 px-4 border-b text-center">73</td><td class="py-2 px-4 border-b text-center">70</td><td class="py-2 px-4 border-b text-center">62</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
                         <p class="mt-4"><strong>Tasks:</strong><br>
                             a. Identify the explanatory and response variables.<br>
                             b. Describe the overall pattern of a scatterplot for this data using DOFS (Direction, Outliers, Form, Strength).</p>
@@ -74,15 +84,15 @@
                             <div class="mt-4 p-4 solution-block rounded-md">
                                <p><strong class="font-semibold text-green-800">a. Variables:</strong></p>
                                <ul class="list-disc list-inside ml-4 text-slate-700">
-                                   [cite_start]<li><strong>Explanatory variable:</strong> Number of class absences[cite: 1868].</li>
-                                   [cite_start]<li><strong>Response variable:</strong> Final exam scores[cite: 1870].</li>
+                                   <li><strong>Explanatory variable:</strong> Number of class absences.</li>
+                                   <li><strong>Response variable:</strong> Final exam scores.</li>
                                </ul>
                                <p class="mt-2"><strong class="font-semibold text-green-800">b. Pattern Description (DOFS):</strong></p>
                                <ul class="list-disc list-inside ml-4 text-slate-700">
-                                   <li><strong>Direction:</strong> There is a **negative association**. [cite_start]As the number of absences increases, the final exam score tends to decrease[cite: 1887].</li>
-                                   [cite_start]<li><strong>Outliers:</strong> There are **no obvious outliers** or striking deviations from the pattern[cite: 1895].</li>
-                                   [cite_start]<li><strong>Form:</strong> The relationship appears to be **linear**[cite: 1889].</li>
-                                   [cite_start]<li><strong>Strength:</strong> The relationship is **strong**, as the points would form a tight cluster around a straight line[cite: 1891].</li>
+                                   <li><strong>Direction:</strong> There is a **negative association**. As the number of absences increases, the final exam score tends to decrease.</li>
+                                   <li><strong>Outliers:</strong> There are **no obvious outliers** or striking deviations from the pattern.</li>
+                                   <li><strong>Form:</strong> The relationship appears to be **linear**.</li>
+                                   <li><strong>Strength:</strong> The relationship is **strong**, as the points would form a tight cluster around a straight line.</li>
                                </ul>
                             </div>
                         </details>
@@ -97,12 +107,12 @@
                  
                     <div class="exercise-card p-6 rounded-lg shadow-md">
                         <h3 class="text-xl font-bold text-purple-800 mb-3">Problem 2: Interpreting a Regression Model</h3>
-                        [cite_start]<p class="mb-4">The relationship between class absences ($x$) and final grades ($y$) is illustrated by the regression model below[cite: 585]:<br><strong class="font-mono text-xl mt-2 inline-block">$\hat{y} = 94.332 - 5.710x$</strong></p>
+                        <p class="mb-4">The relationship between class absences ($x$) and final grades ($y$) is illustrated by the regression model below:<br><strong class="font-mono text-xl mt-2 inline-block">$\hat{y} = 94.332 - 5.710x$</strong></p>
                         <p class="mt-4"><strong>Tasks:</strong><br>
-                            a. [cite_start]What does the intercept mean in this context? [cite: 596]<br>
-                            b. [cite_start]What does the slope mean in this context? [cite: 597]<br>
-                            c. [cite_start]If a student misses three (3) class sessions, what is their predicted final score? [cite: 598]<br>
-                            d. [cite_start]Another student's final score was 82. If they also missed 3 classes, did they perform better or worse than predicted? [cite: 599]</p>
+                            a. What does the intercept mean in this context?<br>
+                            b. What does the slope mean in this context?<br>
+                            c. If a student misses three (3) class sessions, what is their predicted final score?<br>
+                            d. Another student's final score was 82. If they also missed 3 classes, did they perform better or worse than predicted?</p>
                          <details class="mt-4">
                             <summary class="inline-flex items-center bg-purple-500 text-white font-semibold py-2 px-4 rounded-lg hover:bg-purple-600 transition-colors">
                                 <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 mr-2" viewBox="0 0 20 20" fill="currentColor"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm1-11a1 1 0 10-2 0v3.586L7.707 9.293a1 1 0 00-1.414 1.414l3 3a1 1 0 001.414 0l3-3a1 1 0 00-1.414-1.414L11 10.586V7z" clip-rule="evenodd" /></svg>
@@ -111,7 +121,7 @@
                             <div class="mt-4 p-4 solution-block rounded-md">
                                <p><strong class="font-semibold text-green-800">a. Intercept (94.332):</strong> The predicted final grade for a student with **zero absences** is 94.332.</p>
                                <p class="mt-2"><strong class="font-semibold text-green-800">b. Slope (-5.710):</strong> For each **additional class a student misses**, their final grade is predicted to **decrease by 5.710 points**.</p>
-                               <p class="mt-2"><strong class="font-semibold text-green-800">c. Prediction for x=3:</strong><br>$\hat{y} = 94.332 - 5.710(3)$<br>$\hat{y} = 94.332 - 17.13 = 77.192$<br>The predicted final score is **77.202**.</p>
+                               <p class="mt-2"><strong class="font-semibold text-green-800">c. Prediction for x=3:</strong><br>$\hat{y} = 94.332 - 5.710(3)$<br>$\hat{y} = 94.332 - 17.13 = 77.202$<br>The predicted final score is **77.202**.</p>
                                <p class="mt-2"><strong class="font-semibold text-green-800">d. Performance vs. Prediction:</strong><br>The student's residual is: observed - predicted = $82 - 77.202 = +4.798$.<br>Since the residual is positive, the student performed **better than predicted**.</p>
                             </div>
                         </details>
@@ -119,7 +129,7 @@
                     
                     <div class="exercise-card p-6 rounded-lg shadow-md">
                         <h3 class="text-xl font-bold text-purple-800 mb-3">Problem 3: Coffee Shop Sales Model</h3>
-                        <p class="mb-4">A coffee shop wants to understand the relationship between hours open ($x$) and daily sales ($y$). [cite_start]They have the following summary statistics[cite: 601, 602]:</p>
+                        <p class="mb-4">A coffee shop wants to understand the relationship between hours open ($x$) and daily sales ($y$). They have the following summary statistics:</p>
                         <ul class="list-disc list-inside ml-4 text-slate-700">
                             <li>Mean Hours ($\bar{x}$): 7</li>
                             <li>Std. Dev. of Hours ($s_x$): 1.49</li>
@@ -128,9 +138,9 @@
                             <li>Correlation ($r$): 0.99</li>
                         </ul>
                          <p class="mt-4"><strong>Tasks:</strong><br>
-                            a. [cite_start]What percent of variation in sales is explained by the hours open? [cite: 604]<br>
-                            b. [cite_start]Calculate the slope ($b$) and intercept ($a$) of the least-squares regression line[cite: 605, 606].<br>
-                            c. [cite_start]Write the final regression equation[cite: 607].</p>
+                            a. What percent of variation in sales is explained by the hours open?<br>
+                            b. Calculate the slope ($b$) and intercept ($a$) of the least-squares regression line.<br>
+                            c. Write the final regression equation.</p>
                          <details class="mt-4">
                             <summary class="inline-flex items-center bg-purple-500 text-white font-semibold py-2 px-4 rounded-lg hover:bg-purple-600 transition-colors">
                                 <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 mr-2" viewBox="0 0 20 20" fill="currentColor"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm1-11a1 1 0 10-2 0v3.586L7.707 9.293a1 1 0 00-1.414 1.414l3 3a1 1 0 001.414 0l3-3a1 1 0 00-1.414-1.414L11 10.586V7z" clip-rule="evenodd" /></svg>

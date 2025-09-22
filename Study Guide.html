@@ -6,6 +6,14 @@
     <title>Comprehensive Statistics Study Guide</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <script>
+    MathJax = {
+      tex: {
+        inlineMath: [['$', '$'], ['\\(', '\\)']]
+      }
+    };
+    </script>
+    <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
     <style>
         body {
             font-family: 'Inter', sans-serif;
@@ -37,6 +45,13 @@
             margin-top: 0.5rem;
             border-radius: 0.25rem;
         }
+         .info-box {
+            background-color: #f0f9ff; /* sky-50 */
+            border-left: 4px solid #0ea5e9; /* sky-500 */
+            padding: 0.75rem;
+            margin-top: 0.5rem;
+            border-radius: 0.25rem;
+        }
     </style>
 </head>
 <body class="bg-slate-100 text-slate-800">
@@ -44,10 +59,9 @@
     <div class="container mx-auto p-4 sm:p-6 lg:p-8">
         <header class="text-center mb-10 p-8 bg-white rounded-xl shadow-lg">
             <h1 class="text-4xl md:text-5xl font-bold text-slate-900">Comprehensive Statistics Study Guide</h1>
-            <p class="text-lg text-slate-600 mt-2">Everything you need to know for your quiz, based on Chapters 1 & 2.</p>
+            <p class="text-lg text-slate-600 mt-2">Everything you need to know for your quiz, based on Chapters 1, 2, 4 & 5.</p>
         </header>
 
-        <!-- Chapter 1 -->
         <section class="mb-12">
             <h2 class="text-3xl font-bold text-slate-800 mb-6 pb-2 border-b-2 border-indigo-500">Chapter 1: Picturing Distributions with Graphs</h2>
             <div class="space-y-8">
@@ -67,11 +81,11 @@
                      <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
                         <div>
                             <h4 class="text-lg font-semibold text-sky-700">Population Parameter</h4>
-                            <p>A measurable characteristic of a population, denoted by <strong class="text-sky-600">Greek letters</strong> (e.g., μ, σ, ρ).</p>
+                            <p>A measurable characteristic of a population, denoted by <strong class="text-sky-600">Greek letters</strong> (e.g., $\mu$, $\sigma$, $\rho$).</p>
                         </div>
                         <div>
                             <h4 class="text-lg font-semibold text-amber-700">Sample Statistic</h4>
-                            <p>A measurable characteristic of a sample, denoted by <strong class="text-amber-600">Latin letters</strong> (e.g., x̄, s, r).</p>
+                            <p>A measurable characteristic of a sample, denoted by <strong class="text-amber-600">Latin letters</strong> (e.g., $\bar{x}$, $s$, $r$).</p>
                         </div>
                     </div>
                 </div>
@@ -97,7 +111,6 @@
             </div>
         </section>
 
-        <!-- Chapter 2 -->
         <section class="mb-12">
             <h2 class="text-3xl font-bold text-slate-800 mb-6 pb-2 border-b-2 border-indigo-500">Chapter 2: Describing Distributions with Numbers</h2>
              <div class="space-y-8">
@@ -105,13 +118,13 @@
                     <h3 class="text-2xl font-semibold mb-3">Measures of Center</h3>
                     <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
                         <div>
-                            <h4 class="text-xl font-semibold">Mean (x̄)</h4>
-                            <p>The arithmetic average. Formula: <strong class="font-mono">x̄ = (Σxᵢ) / n</strong></p>
+                            <h4 class="text-xl font-semibold">Mean ($\bar{x}$)</h4>
+                            <p>The arithmetic average. Formula: <strong class="font-mono">$\bar{x} = \frac{\Sigma x_i}{n}$</strong></p>
                             <div class="warning"><p>The mean is <strong class="font-semibold">NOT a resistant measure</strong>; it's sensitive to outliers.</p></div>
                         </div>
                         <div>
                             <h4 class="text-xl font-semibold">Median (M)</h4>
-                            <p>The midpoint of a distribution. Found at position <strong class="font-mono">(n+1)/2</strong> in an ordered list.</p>
+                            <p>The midpoint of a distribution. Found at position <strong class="font-mono">$(n+1)/2$</strong> in an ordered list.</p>
                             <div class="resistant"><p>The median <strong class="font-semibold">IS a resistant measure</strong>; it's not affected by outliers.</p></div>
                         </div>
                     </div>
@@ -128,22 +141,22 @@
                     <h3 class="text-2xl font-semibold mb-3">Measures of Variability (Spread)</h3>
                      <div class="space-y-4">
                         <div>
-                            <h4 class="text-xl font-semibold">Quartiles (Q₁, Q₃) and IQR</h4>
+                            <h4 class="text-xl font-semibold">Quartiles ($Q_1, Q_3$) and IQR</h4>
                             <p>Quartiles divide the data into four equal parts. The Interquartile Range (IQR) measures the range of the middle 50% of the data.</p>
-                            <p class="font-semibold">Formula: <strong class="font-mono">IQR = Q₃ - Q₁</strong></p>
+                            <p class="font-semibold">Formula: <strong class="font-mono">IQR = $Q_3 - Q_1$</strong></p>
                             <div class="resistant"><p>Quartiles and IQR <strong class="font-semibold">ARE resistant measures</strong>.</p></div>
                             <div class="mt-4 p-4 bg-slate-50 rounded-lg border">
                                 <h4 class="font-semibold text-slate-800 mb-2">Finding the Quartiles:</h4>
                                 <ul class="list-disc list-inside space-y-2 text-slate-700">
-                                     <li><strong>Q₁ (First Quartile):</strong> The median of the lower half of the data.</li>
-                                     <li><strong>Q₃ (Third Quartile):</strong> The median of the upper half of the data.</li>
+                                     <li><strong>$Q_1$ (First Quartile):</strong> The median of the lower half of the data.</li>
+                                     <li><strong>$Q_3$ (Third Quartile):</strong> The median of the upper half of the data.</li>
                                      <li>When 'n' is odd, do not include the overall Median in the lower or upper halves when finding quartiles.</li>
                                 </ul>
                             </div>
                         </div>
                         <div>
                             <h4 class="text-xl font-semibold">Standard Deviation (s)</h4>
-                            <p>The most common measure of spread, it measures the typical distance of observations from the mean. It is the square root of the variance (s²).</p>
+                            <p>The most common measure of spread, it measures the typical distance of observations from the mean. It is the square root of the variance ($s^2$).</p>
                              <div class="warning"><p>Standard Deviation is <strong class="font-semibold">NOT a resistant measure</strong>.</p></div>
                         </div>
                     </div>
@@ -151,7 +164,7 @@
 
                 <div class="concept-card p-6">
                     <h3 class="text-2xl font-semibold mb-3">The Five-Number Summary & Boxplots</h3>
-                    <p>A summary of a distribution consisting of: <strong class="font-semibold">Minimum, Q₁, Median, Q₃, Maximum</strong>.</p>
+                    <p>A summary of a distribution consisting of: <strong class="font-semibold">Minimum, $Q_1$, Median, $Q_3$, Maximum</strong>.</p>
                     <p>A <strong class="text-indigo-600">Boxplot</strong> is a visual representation of the five-number summary.</p>
                 </div>
                 
@@ -159,77 +172,91 @@
                     <h3 class="text-2xl font-semibold mb-3">Identifying Outliers: The 1.5 x IQR Rule</h3>
                     <p>An observation is a suspected outlier if it falls outside these boundaries:</p>
                     <ul class="list-disc list-inside space-y-2 font-mono text-slate-700 mt-2 bg-slate-100 p-4 rounded-md">
-                        <li><strong>Lower Bound:</strong> Q₁ - (1.5 × IQR)</li>
-                        <li><strong>Upper Bound:</strong> Q₃ + (1.5 × IQR)</li>
+                        <li><strong>Lower Bound:</strong> $Q_1 - (1.5 \times IQR)$</li>
+                        <li><strong>Upper Bound:</strong> $Q_3 + (1.5 \times IQR)$</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <section class="mb-12">
+            <h2 class="text-3xl font-bold text-slate-800 mb-6 pb-2 border-b-2 border-indigo-500">Chapter 4: Scatterplots & Correlation</h2>
+            <div class="space-y-8">
+                <div class="concept-card p-6">
+                    <h3 class="text-2xl font-semibold mb-3">Explanatory & Response Variables</h3>
+                    <ul class="list-disc list-inside space-y-2 text-slate-700">
+                        <li><strong>Explanatory Variable (x-axis):</strong> A variable that may explain or influence changes in a response variable.</li>
+                        <li><strong>Response Variable (y-axis):</strong> A variable that measures an outcome of a study.</li>
                     </ul>
                 </div>
 
+                <div class="concept-card p-6">
+                    <h3 class="text-2xl font-semibold mb-3">Scatterplots</h3>
+                    <p class="mb-2">A scatterplot displays the relationship between two quantitative variables measured on the same individuals. When interpreting a scatterplot, always use the **DOFS** framework:</p>
+                    <ul class="list-disc list-inside space-y-2 text-slate-700">
+                        <li><strong>Direction:</strong> Is the association positive (lower-left to upper-right) or negative (upper-left to lower-right)?</li>
+                        <li><strong>Outliers:</strong> Are there any striking deviations from the overall pattern?</li>
+                        <li><strong>Form:</strong> Is the relationship linear, curvilinear, or something else?</li>
+                        <li><strong>Strength:</strong> How closely do the points follow the form? (e.g., strong, weak)</li>
+                    </ul>
+                </div>
+                
+                <div class="concept-card p-6">
+                    <h3 class="text-2xl font-semibold mb-3">Correlation ($r$)</h3>
+                    <p class="mb-2">The correlation coefficient, $r$, is a numerical measure of the direction and strength of the **linear** relationship between two quantitative variables.</p>
+                    <ul class="list-disc list-inside space-y-2 text-slate-700">
+                        <li>It is always a number between -1 and +1.</li>
+                        <li>An $r$ value close to +1 indicates a strong positive association.</li>
+                        <li>An $r$ value close to -1 indicates a strong negative association.</li>
+                        <li>An $r$ value close to 0 indicates a very weak linear relationship.</li>
+                        <li>Correlation is unitless and is not affected by changes in units of measurement.</li>
+                    </ul>
+                     <div class="warning"><p>Correlation is <strong class="font-semibold">NOT a resistant measure</strong>; it is strongly affected by outliers. Also, **correlation does not imply causation**!</p></div>
+                </div>
             </div>
         </section>
-        
-        <!-- Practice Exercises -->
-        <section>
-            <h2 class="text-3xl font-bold text-slate-800 mb-6 pb-2 border-b-2 border-indigo-500">Practice Exercises</h2>
-            <div class="space-y-6">
-                 <!-- Exercise 1 -->
-                <div>
-                    <h3 class="text-xl font-semibold">Exercise 1: Stemplots</h3>
-                    <p>Data: `84, 95, 76, 88, 91, 72, 65, 88, 79, 90, 88, 76, 81, 90, 68`</p>
-                    <button onclick="toggleSolution('sol1')" class="mt-2 bg-indigo-600 text-white font-semibold py-2 px-4 rounded-lg hover:bg-indigo-700">Show Solution</button>
-                    <div id="sol1" class="solution">
-                        <p><strong>Ordered Data:</strong> `65, 68, 72, 76, 76, 79, 81, 84, 88, 88, 88, 90, 90, 91, 95`</p>
-                        <pre class="bg-white p-2 rounded mt-2">6 | 5 8
-7 | 2 6 6 9
-8 | 1 4 8 8 8
-9 | 0 0 1 5</pre>
-                        <p><strong>Shape:</strong> Roughly symmetric, with a slight left skew.</p>
-                    </div>
+
+        <section class="mb-12">
+            <h2 class="text-3xl font-bold text-slate-800 mb-6 pb-2 border-b-2 border-indigo-500">Chapter 5: Regression</h2>
+            <div class="space-y-8">
+                <div class="concept-card p-6">
+                    <h3 class="text-2xl font-semibold mb-3">The Regression Line</h3>
+                    <p class="mb-2">A regression line is a straight line that describes how a response variable ($y$) changes as an explanatory variable ($x$) changes. It is used to **predict** the value of $y$ for a given value of $x$.</p>
+                    <p class="text-center font-mono text-xl bg-slate-100 p-3 rounded mt-2">$\hat{y} = a + bx$</p>
+                    <ul class="list-disc list-inside space-y-2 text-slate-700 mt-3">
+                        <li>$\hat{y}$ (y-hat) is the **predicted value** of the response variable.</li>
+                        <li>**Slope ($b$):** The predicted change in $y$ for each 1-unit increase in $x$.</li>
+                        <li>**Intercept ($a$):** The predicted value of $y$ when $x=0$.</li>
+                    </ul>
                 </div>
-                 <!-- Exercise 2 -->
-                <div>
-                    <h3 class="text-xl font-semibold">Exercise 2: Numerical Summaries</h3>
-                    <p>Using the same data from Exercise 1.</p>
-                    <button onclick="toggleSolution('sol2')" class="mt-2 bg-indigo-600 text-white font-semibold py-2 px-4 rounded-lg hover:bg-indigo-700">Show Solution</button>
-                    <div id="sol2" class="solution">
-                        <p><strong>Mean (x̄):</strong> (1231 / 15) ≈ 82.07</p>
-                        <p><strong>Median (M):</strong> n=15 (odd). Location is (15+1)/2 = 8th value. Median = 84.</p>
-                        <p><strong>Conclusion:</strong> Since the mean (82.07) is less than the median (84), the distribution is slightly skewed to the left.</p>
-                    </div>
+                
+                <div class="concept-card p-6">
+                    <h3 class="text-2xl font-semibold mb-3">Least-Squares Regression Line (LSRL)</h3>
+                    <p>This is the line that makes the sum of the squared vertical distances (residuals) of the data points from the line as small as possible. It's the most common method for fitting a line to data.</p>
+                    <div class="info-box"><p>The LSRL always passes through the point $(\bar{x}, \bar{y})$.</p></div>
                 </div>
-                 <!-- Exercise 3 -->
-                <div>
-                    <h3 class="text-xl font-semibold">Exercise 3: Five-Number Summary & Outliers</h3>
-                     <p>Data: `15, 41, 12, 18, 22, 25, 17, 33, 21, 28, 9, 39`</p>
-                    <button onclick="toggleSolution('sol3')" class="mt-2 bg-indigo-600 text-white font-semibold py-2 px-4 rounded-lg hover:bg-indigo-700">Show Solution</button>
-                    <div id="sol3" class="solution">
-                        <p><strong>Ordered Data:</strong> `9, 12, 15, 17, 18, 21, 22, 25, 28, 33, 39, 41`</p>
-                        <p><strong>Five-Number Summary:</strong></p>
-                        <ul class="list-disc list-inside">
-                            <li>Minimum = 9</li>
-                            <li>Q₁ = (15+17)/2 = 16</li>
-                            <li>Median = (21+22)/2 = 21.5</li>
-                            <li>Q₃ = (28+33)/2 = 30.5</li>
-                            <li>Maximum = 41</li>
-                        </ul>
-                         <p class="mt-2"><strong>IQR:</strong> 30.5 - 16 = 14.5</p>
-                         <p class="mt-2"><strong>Outlier Check:</strong> Lower Bound = 16 - (1.5 * 14.5) = -5.75. Upper Bound = 30.5 + (1.5 * 14.5) = 52.25. There are <strong>no outliers</strong>.</p>
-                    </div>
+
+                <div class="concept-card p-6">
+                    <h3 class="text-2xl font-semibold mb-3">Residuals & $r^2$</h3>
+                    <ul class="list-disc list-inside space-y-4 text-slate-700">
+                        <li><strong>Residual:</strong> The difference between an observed value of $y$ and the value predicted by the regression line ($\hat{y}$).
+                            <p class="font-mono bg-slate-100 p-2 rounded mt-1">Residual = observed $y$ - predicted $\hat{y}$</p>
+                        </li>
+                        <li><strong>Coefficient of Determination ($r^2$):</strong> The proportion (or percentage) of the variation in the values of $y$ that can be explained by the least-squares regression of $y$ on $x$. For example, an $r^2$ of 0.75 means that 75% of the variation in the response variable is accounted for by the linear model.</li>
+                    </ul>
+                </div>
+                
+                <div class="concept-card p-6">
+                    <h3 class="text-2xl font-semibold mb-3">Cautions in Regression</h3>
+                    <ul class="list-disc list-inside space-y-2 text-slate-700">
+                        <li><strong>Outliers:</strong> Some outliers, known as **influential points**, can significantly change the slope, intercept, and correlation of the regression line.</li>
+                        <li><strong>Extrapolation:</strong> This is the use of a regression line for prediction far outside the range of values of the explanatory variable $x$ that you used to obtain the line. Such predictions are often not accurate and should be avoided.</li>
+                    </ul>
                 </div>
             </div>
         </section>
         
     </div>
-
-    <script>
-        function toggleSolution(id) {
-            const el = document.getElementById(id);
-            if (el.style.display === 'block') {
-                el.style.display = 'none';
-            } else {
-                el.style.display = 'block';
-            }
-        }
-    </script>
 
 </body>
 </html>
