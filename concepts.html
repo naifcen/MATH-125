@@ -24,12 +24,12 @@
         </header>
 
         <div id="flashcard-grid" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-            <!-- Flashcards will be dynamically inserted here -->
-        </div>
+            </div>
     </div>
 
     <script>
         const flashcards = [
+            // Chapter 1 & 2
             { q: "What are the objects described by a set of data called?", a: "Individuals." },
             { q: "What is a characteristic of an individual called?", a: "A variable." },
             { q: "What is the key difference between a population and a sample?", a: "A population is the entire group of interest, while a sample is a subset of that population." },
@@ -53,7 +53,23 @@
             { q: "Which measures of center and spread should you use for a skewed distribution?", a: "The five-number summary (Median and IQR) because they are resistant." },
             { q: "What is the symbol for a sample mean, and what is its common name?", a: "x̄, pronounced 'x-bar'." },
             { q: "What is the symbol for a population mean?", a: "μ (the Greek letter mu)." },
-            { q: "What does the symbol Σ (Sigma) mean in a formula?", a: "It means to sum up, or add all the values." }
+            { q: "What does the symbol Σ (Sigma) mean in a formula?", a: "It means to sum up, or add all the values." },
+            // Chapter 4 & 5
+            { q: "A variable that may explain or influence changes in another variable is called the _______ variable.", a: "Explanatory (or predictor) variable." },
+            { q: "A variable that measures an outcome of a study is called the _______ variable.", a: "Response variable." },
+            { q: "What graph is used to show the relationship between two quantitative variables?", a: "A scatterplot." },
+            { q: "When interpreting a scatterplot, what four patterns should you look for (DOFS)?", a: "Direction, Outliers, Form, and Strength." },
+            { q: "What does the correlation coefficient (r) measure?", a: "The direction and strength of the LINEAR association between two quantitative variables." },
+            { q: "What is the possible range of values for the correlation coefficient (r)?", a: "From -1 to +1, inclusive." },
+            { q: "A strong relationship is shown by an r-value close to ____ or ____.", a: "-1 or +1." },
+            { q: "True or False: A correlation of r=0.9 means that a change in the explanatory variable causes a change in the response variable.", a: "False. Correlation does not imply causation." },
+            { q: "A ______ is a straight line that describes how a response variable (y) changes as an explanatory variable (x) changes.", a: "Regression line." },
+            { q: "What is the general form of a regression equation?", a: "ŷ = a + bx" },
+            { q: "In the regression equation, what does the slope (b) represent?", a: "The predicted change in the response variable (y) for every one-unit increase in the explanatory variable (x)." },
+            { q: "In the regression equation, what does the y-intercept (a) represent?", a: "The predicted value of the response variable (y) when the explanatory variable (x) is 0." },
+            { q: "What is a residual?", a: "The difference between the observed value of y and the predicted value of y (residual = observed y - predicted ŷ)." },
+            { q: "What does the coefficient of determination (r²) tell us?", a: "It represents the fraction or percentage of the variation in the y-values that is explained by the least-squares regression on x." },
+            { q: "What is extrapolation?", a: "Using a regression line to make predictions for x-values far outside the range of the original data. It is often unreliable." }
         ];
 
         const grid = document.getElementById('flashcard-grid');
@@ -85,4 +101,3 @@
 
 </body>
 </html>
-
